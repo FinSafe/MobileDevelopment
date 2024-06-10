@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="FinSafe">FinSafe</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="general">General</string>
+    <string name="mode_hitam">Mode Hitam</string>
+    <string name="logout">Keluar</string>
 
 </resources>
