@@ -4,15 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@color/purple3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/purple"
+        tools:layout_editor_absoluteX="-53dp"
+        tools:layout_editor_absoluteY="-115dp"
+        tools:ignore="MissingConstraints" />
+
     <TextView
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/welcome"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/username"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/welcome"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="@color/yellow"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prediksi_pengeluaranku"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/harga"/>
+            
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/harga"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                
+                <TextView
+                    android:id="@+id/rupiah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/rp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/jumlah_pengeluaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/jumlah_pengeluaran"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lihat_detail"
+                android:backgroundTint="@color/purple"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width=""
+        android:layout_height=""
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/purple3"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
