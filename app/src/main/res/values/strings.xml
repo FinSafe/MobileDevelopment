@@ -12,5 +12,6 @@
     <string name="rp">Rp</string>
     <string name="jumlah_pengeluaran">7.000.000,00</string>
     <string name="prediksi_pengeluaranku">PREDIKSI PENGELUARAN KU</string>
+    <string name="register">Register</string>
 
 </resources>
