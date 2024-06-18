@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="85dp"
+    android:paddingRight="16dp"
+    tools:context=".ui.informationUser.LoginActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:text="@string/login"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="168dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:text="@string/Selamat_datang"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="210dp"
+        android:layout_height="34dp"
+        android:textSize="15sp"
+        android:text="@string/Masukan_data"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/text2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_username"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:text="@string/nama_pengguna"
+        app:layout_constraintBottom_toTopOf="@+id/login_username"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_password"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:text="@string/Kata_sandi"
+        app:layout_constraintBottom_toTopOf="@+id/login_password"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_lupa_password"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="53dp"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:textColor="@color/purple"
+        android:text="@string/forget_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.example.myapplication.ui.customview.CustomEditText
+        android:id="@+id/login_username"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rounded_edittext_background"
+        app:layout_constraintTop_toBottomOf="@+id/text3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <com.example.myapplication.ui.customview.CustomEditText
+        android:id="@+id/login_password"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/rounded_edittext_background"
+        app:layout_constraintTop_toBottomOf="@+id/login_username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/login_google"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/purple"
+        android:textColor="@color/white"
+        android:text="@string/Enter"
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyle"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
