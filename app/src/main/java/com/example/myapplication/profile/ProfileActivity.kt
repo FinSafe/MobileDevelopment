@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.profile
+package com.example.myapplication.profile
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
