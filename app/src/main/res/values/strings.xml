@@ -13,4 +13,20 @@
     <string name="jumlah_pengeluaran">7.000.000,00</string>
     <string name="prediksi_pengeluaranku">PREDIKSI PENGELUARAN KU</string>
 
+
+<!-- Login Stuff-->
+    <string name="login">Login</string>
+    <string name="Selamat_datang">Selamat datang kembali</string>
+    <string name="Masukan_data">Masukan datamu untuk masuk ke dalam aplikasi</string>
+    <string name="nama_pengguna">Nama</string>
+    <string name="Kata_sandi">Kata sandi</string>
+    <string name="forget_password">Lupa kata sandi</string>
+    <string name="Enter">Masuk</string>
+
+<!-- Picture-->
+
+<!-- Custom EditText-->
+    <string name="error_name">Tolong masukan nama</string>
+    <string name="error_password">Masukan minimal 8 char</string>
+
 </resources>
