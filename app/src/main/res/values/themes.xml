@@ -5,5 +5,44 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="interThin">
+        <item name="fontFamily">@font/inter_thin</item>
+    </style>
+
+    <style name="interExtraLight">
+        <item name="fontFamily">@font/inter_extralight</item>
+    </style>
+
+    <style name="interLight">
+        <item name="fontFamily">@font/inter_light</item>
+    </style>
+
+    <style name="InterRegular">
+        <item name="fontFamily">@font/inter_regular</item>
+    </style>
+
+
+    <style name="interMedium">
+        <item name="fontFamily">@font/inter_medium</item>
+    </style>
+
+    <style name="interSemiBold">
+        <item name="fontFamily">@font/inter_semibold</item>
+    </style>
+
+    <style name="interBold">
+        <item name="fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="interExtraBold">
+        <item name="fontFamily">@font/inter_extrabold</item>
+    </style>
+
+    <style name="interBlack">
+        <item name="fontFamily">@font/inter_black</item>
+    </style>
+
+
     <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+
 </resources>

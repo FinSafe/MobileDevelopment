@@ -24,6 +24,7 @@
     <string name="Kata_sandi">Kata sandi</string>
     <string name="forget_password">Lupa kata sandi</string>
     <string name="Enter">Masuk</string>
+    <string name="login_success">login berhasil</string>
 
     <!-- Picture-->
 
@@ -40,5 +41,8 @@
     <string name="selamat">Selamat</string>
     <string name="welcome2">Mari masuk untuk memulai \nperjalananmu</string>
     <string name="mulai">mulai</string>
+    <string name="error_message">Sesuatu ada yang Salah\nMohoh dicoba kembali</string>
+    <string name="ok">Oke</string>
+    <string name="response_image">gambar respon</string>
 
 </resources>

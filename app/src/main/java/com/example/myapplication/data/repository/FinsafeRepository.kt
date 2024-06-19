@@ -1,7 +1,10 @@
 package com.example.myapplication.data.repository
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.liveData
 import com.example.myapplication.data.pref.UserModel
 import com.example.myapplication.data.pref.UserPreference
+import com.example.myapplication.data.response.LoginResponse
 import com.example.myapplication.data.response.ResponseRegister
 import com.example.myapplication.data.retrofit.ApiService
 import kotlinx.coroutines.flow.Flow
@@ -19,6 +22,24 @@ class FinsafeRepository private constructor(
         return userPreference.getSession()
     }
 
+    fun login(
+        email: String,
+        password: String
+    ): LiveData<Result<LoginResponse>> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.login(
+                email, password
+            )
+            if (response.status == "fail"){
+                emit(Result.Error(response.message))
+            } else {
+                emit(Result.Success(response))
+            }
+        } catch (e: Exception){
+            emit(Result.Error(e.message.toString()))
+        }
+    }
     suspend fun logout() {
         userPreference.logout()
     }
