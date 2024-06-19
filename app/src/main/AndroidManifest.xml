@@ -23,7 +23,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.profile.ProfileActivity"
-            android:name=".ui.informationUser.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".ui.Login.LoginActivity"
