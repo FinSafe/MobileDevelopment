@@ -1,12 +1,12 @@
-package com.example.myapplication.register
+package com.example.myapplication.ui.register
 
 import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.myapplication.data.FinsafeRepository
-import com.example.myapplication.data.RegisterResponse
+import com.example.myapplication.data.repository.FinsafeRepository
+import com.example.myapplication.data.response.RegisterResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

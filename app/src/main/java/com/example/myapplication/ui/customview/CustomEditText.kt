@@ -13,17 +13,20 @@ class CustomEditText (context: Context, attrs: AttributeSet) : AppCompatEditText
             R.id.login_username -> {
                 addTextChangedListener(object : TextWatcher {
                     override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                        TODO("Not yet implemented")
+
                     }
 
                     override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                        TODO("Not yet implemented")
+                        if (p0.toString().isEmpty()) {
+                            val ErrorMessage = context.getString(R.string.error_name)
+                            this@CustomEditText.error = ErrorMessage
+                        }
                     }
 
                     override fun afterTextChanged(p0: Editable?) {
-                        if(!android.util.Patterns.EMAIL_ADDRESS.matcher(text).matches()){
-                            val errorMessage = context.getString(R.string.error_name)
-                            this@CustomEditText.error = errorMessage
+                        if (p0.toString().isEmpty()) {
+                            val ErrorMessage = context.getString(R.string.error_name)
+                            this@CustomEditText.error = ErrorMessage
                         }
                     }
                 })
@@ -32,11 +35,14 @@ class CustomEditText (context: Context, attrs: AttributeSet) : AppCompatEditText
             R.id.login_password -> {
                 addTextChangedListener(object : TextWatcher {
                     override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                        TODO("Not yet implemented")
+
                     }
 
                     override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                        TODO("Not yet implemented")
+                        if (this@CustomEditText.text?.trim().toString().length < 8) {
+                            val errorMessage = context.getString(R.string.error_password)
+                            this@CustomEditText.error = errorMessage
+                        }
                     }
 
                     override fun afterTextChanged(p0: Editable?) {

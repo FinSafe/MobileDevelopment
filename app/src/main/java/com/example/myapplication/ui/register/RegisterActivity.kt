@@ -1,4 +1,4 @@
-package com.example.myapplication.register
+package com.example.myapplication.ui.register
 
 import android.content.Intent
 import android.os.Build
@@ -6,16 +6,12 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
-import com.example.myapplication.R
-import com.example.myapplication.ViewModelFactory
+import com.example.myapplication.data.ViewModelFactory
 import com.example.myapplication.databinding.ActivityRegisterBinding
-import com.example.myapplication.ui.informationUser.LoginActivity
+import com.example.myapplication.ui.Login.LoginActivity
 import com.google.android.material.snackbar.Snackbar
 
 class RegisterActivity : AppCompatActivity() {

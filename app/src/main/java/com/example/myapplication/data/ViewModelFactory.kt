@@ -1,11 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.data
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.myapplication.data.FinsafeRepository
-import com.example.myapplication.data.Injection
-import com.example.myapplication.register.RegisterViewModel
+import com.example.myapplication.data.repository.FinsafeRepository
+import com.example.myapplication.data.repository.Injection
+import com.example.myapplication.ui.register.RegisterViewModel
 
 class ViewModelFactory private constructor(private val repository: FinsafeRepository): ViewModelProvider.Factory{
     @Suppress("UNCHECKED_CAST")
@@ -25,8 +25,8 @@ class ViewModelFactory private constructor(private val repository: FinsafeReposi
         private var INSTANCE: ViewModelFactory? = null
 
         @JvmStatic
-        fun getInstance(context: Context): ViewModelFactory{
-            if (INSTANCE==null) {
+        fun getInstance(context: Context): ViewModelFactory {
+            if (INSTANCE ==null) {
                 synchronized(ViewModelFactory::class.java) {
                     INSTANCE = ViewModelFactory(Injection.provideRepository(context))
                 }

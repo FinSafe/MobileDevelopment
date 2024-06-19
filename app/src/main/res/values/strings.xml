@@ -15,7 +15,8 @@
     <string name="register">Register</string>
 
 
-<!-- Login Stuff-->
+    <!-- Login Stuff-->
+    <string name="fill_data">Tolong isi data dengan benar</string>
     <string name="login">Login</string>
     <string name="Selamat_datang">Selamat datang kembali</string>
     <string name="Masukan_data">Masukan datamu untuk masuk ke dalam aplikasi</string>
@@ -24,9 +25,9 @@
     <string name="forget_password">Lupa kata sandi</string>
     <string name="Enter">Masuk</string>
 
-<!-- Picture-->
+    <!-- Picture-->
 
-<!-- Custom EditText-->
+    <!-- Custom EditText-->
     <string name="error_name">Tolong masukan nama</string>
     <string name="error_password">Masukan minimal 8 char</string>
     <string name="tabungan_idealku">Tabungan Ideal Ku</string>

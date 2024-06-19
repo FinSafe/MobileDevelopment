@@ -1,6 +1,6 @@
 package com.example.myapplication.data.retrofit
 
-import com.example.myapplication.data.RegisterResponse
+import com.example.myapplication.data.response.RegisterResponse
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
