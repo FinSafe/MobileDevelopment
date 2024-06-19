@@ -37,5 +37,8 @@
     <string name="passwordconfirm">Masukan password kembali</string>
     <string name="daftar">Daftar</string>
     <string name="sudahadaakun">Sudah memiliki akun?</string>
+    <string name="selamat">Selamat</string>
+    <string name="welcome2">Mari masuk untuk memulai \nperjalananmu</string>
+    <string name="mulai">mulai</string>
 
 </resources>

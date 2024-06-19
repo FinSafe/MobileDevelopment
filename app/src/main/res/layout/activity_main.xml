@@ -5,24 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.home.MainActivity">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:background="@color/purple3"
+        android:background="@color/purple"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <View
-        android:layout_width="350dp"
-        android:layout_height="300dp"
-        android:background="@drawable/circle"
-        android:backgroundTint="@color/purple"
-        tools:layout_editor_absoluteX="-53dp"
-        tools:layout_editor_absoluteY="-115dp"
-        tools:ignore="MissingConstraints" />
+
 
     <TextView
         android:id="@+id/welcome"

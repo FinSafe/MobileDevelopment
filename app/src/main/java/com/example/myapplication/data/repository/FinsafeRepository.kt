@@ -1,10 +1,11 @@
 package com.example.myapplication.data.repository
 
-import android.telecom.Call
 import com.example.myapplication.data.pref.UserModel
 import com.example.myapplication.data.pref.UserPreference
+import com.example.myapplication.data.response.ResponseRegister
 import com.example.myapplication.data.retrofit.ApiService
 import kotlinx.coroutines.flow.Flow
+import retrofit2.Call
 
 class FinsafeRepository private constructor(
     private val apiService: ApiService,
@@ -22,7 +23,7 @@ class FinsafeRepository private constructor(
         userPreference.logout()
     }
 
-    fun signup(name: String, email: String, password: String): Call<> {
+    fun signup(name: String, email: String, password: String): Call<ResponseRegister> {
         return apiService.register(name, email, password)
     }
 

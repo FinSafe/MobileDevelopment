@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityLoginBinding
-import com.example.myapplication.ui.MainActivity
+import com.example.myapplication.ui.home.MainActivity
 import com.example.myapplication.ui.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
