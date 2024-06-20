@@ -1,5 +1,6 @@
 package com.example.myapplication.data.retrofit
 
+import com.example.myapplication.data.response.LoginResponse
 import com.example.myapplication.data.response.ResponseRegister
 import retrofit2.Call
 import retrofit2.http.Field
@@ -14,4 +15,11 @@ interface ApiService {
         @Field("email") email: String,
         @Field("password") password: String
     ): Call<ResponseRegister>
+
+    @FormUrlEncoded
+    @POST("login")
+    suspend fun login(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): LoginResponse
 }

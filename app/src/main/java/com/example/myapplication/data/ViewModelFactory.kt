@@ -5,12 +5,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.data.repository.FinsafeRepository
 import com.example.myapplication.data.repository.Injection
+import com.example.myapplication.ui.Login.LoginViewModel
 import com.example.myapplication.ui.register.RegisterViewModel
 
 class ViewModelFactory private constructor(private val repository: FinsafeRepository): ViewModelProvider.Factory{
     @Suppress("UNCHECKED_CAST")
     override fun <T: ViewModel> create(modelClass: Class<T>): T {
         return when {
+            modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
+                LoginViewModel(repository) as T
+            }
             modelClass.isAssignableFrom(RegisterViewModel::class.java) -> {
                 RegisterViewModel(repository) as T
             }

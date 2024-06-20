@@ -2,10 +2,15 @@ package com.example.myapplication.ui.Login
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
+import com.example.myapplication.data.ViewModelFactory
+import com.example.myapplication.data.pref.LoginPreference
+import com.example.myapplication.data.response.LoginResponse
 import com.example.myapplication.databinding.ActivityLoginBinding
 import com.example.myapplication.ui.home.MainActivity
 import com.example.myapplication.ui.register.RegisterActivity
@@ -13,6 +18,8 @@ import com.example.myapplication.ui.register.RegisterActivity
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var progressBar: ProgressBar
+    private lateinit var vmFactory: ViewModelFactory
+    private val loginViewModel: LoginViewModel by viewModels { vmFactory }
 
     //  private lateinit var vmFactory: ViewModelFactory
 //    private val loginViewModel: LoginViewModel by viewModels {vmFactory}
@@ -30,52 +37,53 @@ class LoginActivity : AppCompatActivity() {
 
     private fun loginBtnClick() {
         binding.btnLogin.setOnClickListener {
-            val username = binding.loginUsername.text.toString().trim()
+            val email = binding.loginUsername.text.toString().trim()
             val Password = binding.loginPassword.text.toString().trim()
 
-            if (username.isEmpty() || Password.isEmpty() || Password.length < 8) {
+            if (email.isEmpty() || Password.isEmpty() || Password.length < 8 || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 Toast.makeText(this, R.string.fill_data, Toast.LENGTH_SHORT).show()
             } else {
-//                login(username, Password)
-                moveToMainActivity()
+                login(email, Password)
             }
         }
     }
 
-//    private fun login(username: String, Password: String) {
-//      loginViewModel.postLogin(username, Password).observe(this@LoginActivity){ result ->
-//    if (result != null) {
-//        when(result) {
-//            is com.farisafra.dicodingstory.data.repository.Result.Loading -> {
-//                progressBar.visibility = View.VISIBLE
-//            }
-//                progressBar.visibility = View.GONE
-//                errorResponse()
-//            }
-//            is com.farisafra.dicodingstory.data.repository.Result.Success -> {
-//                progressBar.visibility = View.GONE
-//                successLoginHandler(result.data)
-//            }
-//        }
-//    }
-//      }
-//    }
-//}
+    private fun login(email: String, Password: String) {
+        loginViewModel.postLogin(email, Password).observe(this@LoginActivity) { result ->
+            if (result != null) {
+                when (result) {
+                    is com.example.myapplication.data.repository.Result.Loading -> {
+                        progressBar.visibility = View.VISIBLE
+                    }
 
-//    private fun successLoginHandler(loginResponse: LoginResponse) {
-//        saveData(loginResponse)
-//        Toast.makeText(this, R.string.login_success, Toast.LENGTH_SHORT).show()
-    //       moveToMainActivity()
-//    }
+                    is com.example.myapplication.data.repository.Result.Error -> {
+                        progressBar.visibility = View.GONE
+                        errorResponse()
+                    }
 
-//    private fun saveData(response: LoginResponse) {
-//        val loginPreference = LoginPreference(this)
-//        loginPreference.setLogin(response.loginResult?.name ?: "", response.loginResult?.userId ?: "", response.loginResult?.token ?: "")
-//    }
+                    is com.example.myapplication.data.repository.Result.Success -> {
+                        progressBar.visibility = View.GONE
+                        successLoginHandler(result.data)
+                    }
+                }
+            }
+        }
+    }
 
-//    private fun errorResponse() {
-//        ResponseView(this, R.string.error_message, R.drawable.symbols_error).show()
-//    }
+    private fun successLoginHandler(loginResponse: LoginResponse) {
+        saveData(loginResponse)
+        Toast.makeText(this, R.string.login_success, Toast.LENGTH_SHORT).show()
+           moveToMainActivity()
+    }
+
+    private fun saveData(response: LoginResponse) {
+        val loginPreference = LoginPreference(this)
+        loginPreference.setLogin(response.token?: "")
+    }
+
+    private fun errorResponse() {
+        ResponseView(this, R.string.error_message, R.drawable.symbols_error).show()
+    }
 
     private fun moveToMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
