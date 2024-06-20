@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.data.repository.FinsafeRepository
 import com.example.myapplication.data.repository.Injection
 import com.example.myapplication.ui.Login.LoginViewModel
+import com.example.myapplication.ui.profile.ProfileViewModel
 import com.example.myapplication.ui.register.RegisterViewModel
 
 class ViewModelFactory private constructor(private val repository: FinsafeRepository): ViewModelProvider.Factory{
@@ -17,6 +18,9 @@ class ViewModelFactory private constructor(private val repository: FinsafeReposi
             }
             modelClass.isAssignableFrom(RegisterViewModel::class.java) -> {
                 RegisterViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
+                return ProfileViewModel(repository) as T
             }
             else -> throw IllegalArgumentException("UnknownViewModel class: " + modelClass.name)
         }

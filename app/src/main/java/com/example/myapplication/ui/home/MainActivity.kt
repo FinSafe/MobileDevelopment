@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.example.myapplication.data.ViewModelFactory
 import com.example.myapplication.data.pref.LoginPreference
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.ui.landingPage.LandingThirdActivity
 import com.example.myapplication.ui.register.RegisterActivity
 
 class MainActivity : AppCompatActivity() {
@@ -14,10 +15,23 @@ class MainActivity : AppCompatActivity() {
     private lateinit var loginPreference: LoginPreference
     private lateinit var vmFactory: ViewModelFactory
 
+    private val viewModel by viewModels<MainViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        viewModel.getSession().observe(this) { user ->
+            if (!user.isLogin) {
+                startActivity(Intent(this, LandingThirdActivity::class.java))
+            } else {
+
+            }
+        }
+
 
         setupViewModel()
         getusername()

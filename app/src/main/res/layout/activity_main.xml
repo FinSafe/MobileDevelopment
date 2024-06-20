@@ -22,7 +22,7 @@
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
+        android:text="@string/selamatDatang"
         android:textSize="22sp"
         android:textColor="@color/white"
         android:layout_marginTop="30dp"
@@ -35,12 +35,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="@string/username"
+        android:text="@string/username_home"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:layout_marginTop="4dp"
         app:layout_constraintTop_toBottomOf="@id/welcome"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:src="@tools:sample/avatars"/>
+
+    </androidx.cardview.widget.CardView>
+
+
     
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
@@ -112,10 +129,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
-    
-<!-- <androidx.cardview.widget.CardView
-        android:layout_width=""
-        android:layout_height=""-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/tabungan_idealku"
@@ -206,7 +219,7 @@
                     android:id="@+id/dana_jumlah_pengeluaran"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/jumlah_pengeluaran"
+                    android:text="@string/dana_darurat_jumlah"
                     android:textColor="@color/white"
                     android:textSize="28sp"
                     android:textStyle="bold"
