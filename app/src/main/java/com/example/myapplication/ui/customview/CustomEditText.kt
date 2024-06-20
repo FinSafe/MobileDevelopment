@@ -10,22 +10,19 @@ import com.example.myapplication.R
 class CustomEditText (context: Context, attrs: AttributeSet) : AppCompatEditText(context, attrs){
     init {
         when(id){
-            R.id.login_username -> {
+            R.id.login_emails -> {
                 addTextChangedListener(object : TextWatcher {
                     override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
                     }
 
                     override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                        if (p0.toString().isEmpty()) {
-                            val ErrorMessage = context.getString(R.string.error_name)
-                            this@CustomEditText.error = ErrorMessage
-                        }
+
                     }
 
                     override fun afterTextChanged(p0: Editable?) {
-                        if (p0.toString().isEmpty()) {
-                            val ErrorMessage = context.getString(R.string.error_name)
+                        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(text).matches()) {
+                            val ErrorMessage = context.getString(R.string.error_email)
                             this@CustomEditText.error = ErrorMessage
                         }
                     }

@@ -29,7 +29,7 @@
     <!-- Picture-->
 
     <!-- Custom EditText-->
-    <string name="error_name">Tolong masukan nama</string>
+    <string name="error_email">Format email salah</string>
     <string name="error_password">Masukan minimal 8 char</string>
     <string name="tabungan_idealku">Tabungan Ideal Ku</string>
     <string name="dana_darurat">Rekomendasi Dana Darurat</string>

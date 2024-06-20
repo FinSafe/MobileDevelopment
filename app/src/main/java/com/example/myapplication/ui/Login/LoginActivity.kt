@@ -32,11 +32,16 @@ class LoginActivity : AppCompatActivity() {
         loginBtnClick()
         backActivity()
         moveToRegister()
+        setupViewModel()
+    }
+
+    private fun setupViewModel() {
+        vmFactory = ViewModelFactory.getInstance(binding.root.context)
     }
 
     private fun loginBtnClick() {
         binding.btnLogin.setOnClickListener {
-            val email = binding.loginUsername.text.toString().trim()
+            val email = binding.loginEmails.text.toString().trim()
             val Password = binding.loginPassword.text.toString().trim()
 
             if (email.isEmpty() || Password.isEmpty() || Password.length < 8 || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
