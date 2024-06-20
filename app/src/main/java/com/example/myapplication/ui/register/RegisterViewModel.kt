@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.data.repository.FinsafeRepository
+import com.example.myapplication.data.response.ResponseRegister
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,10 +27,10 @@ class RegisterViewModel(private val repository: FinsafeRepository): ViewModel() 
     fun signup(name: String, email: String, password: String) {
         _isLoadingSignup.value = true
         val client = repository.signup(name,email,password)
-        client.enqueue(object: Callback<RegisterResponse>{
+        client.enqueue(object: Callback<ResponseRegister>{
             override fun onResponse(
-                call: Call<RegisterResponse>,
-                response: Response<RegisterResponse>
+                call: Call<ResponseRegister>,
+                response: Response<ResponseRegister>
             ) {
                 _isLoadingSignup.value = false
                 if (response.isSuccessful) {
@@ -46,7 +47,7 @@ class RegisterViewModel(private val repository: FinsafeRepository): ViewModel() 
                 }
             }
 
-            override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
+            override fun onFailure(call: Call<ResponseRegister>, t: Throwable) {
                 _isLoadingSignup.value = false
                 errorSignup = true
                 Log.e(TAG, "onFailure: ${t.message.toString()}")

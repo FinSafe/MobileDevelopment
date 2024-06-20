@@ -12,6 +12,7 @@ import com.example.myapplication.data.ViewModelFactory
 import com.example.myapplication.data.pref.LoginPreference
 import com.example.myapplication.data.response.LoginResponse
 import com.example.myapplication.databinding.ActivityLoginBinding
+import com.example.myapplication.ui.customview.ResponView
 import com.example.myapplication.ui.home.MainActivity
 import com.example.myapplication.ui.register.RegisterActivity
 
@@ -21,8 +22,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var vmFactory: ViewModelFactory
     private val loginViewModel: LoginViewModel by viewModels { vmFactory }
 
-    //  private lateinit var vmFactory: ViewModelFactory
-//    private val loginViewModel: LoginViewModel by viewModels {vmFactory}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -82,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun errorResponse() {
-        ResponseView(this, R.string.error_message, R.drawable.symbols_error).show()
+        ResponView(this, R.string.error_message, R.drawable.baseline_error_outline_24).show()
     }
 
     private fun moveToMainActivity() {
