@@ -11,7 +11,7 @@
         android:id="@+id/kepalaKeluargaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="55dp"
         android:layout_marginTop="28dp"
         android:text="@string/kepalaRumah"
         android:textColor="@color/black"
@@ -42,12 +42,12 @@
         android:id="@+id/usiaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="23dp"
         android:text="@string/usiaRumah"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/usiaEditTextLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/usiaEditTextLayout"
@@ -66,7 +66,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

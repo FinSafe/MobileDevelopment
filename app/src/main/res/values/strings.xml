@@ -1,24 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--    <string name="ayo_mulai">Ayo Mulai !</string>-->
-    <!--    <string name="register">Register</string>-->
-    <!--    <string name="username">Username</string>-->
-    <!--    <string name="emailTextView">Email</string>-->
-    <!--    <string name="password">Password</string>-->
-    <!--    <string name="daftar">Daftar</string>-->
-    <!--    <string name="sudahadaakun">"Sudah memiliki akun "</string>-->
-    <!--    <string name="login">login</string>-->
-    <!--    <string name="landingpage3">Pilih untuk memulai perjalanan \ntabungan mu</string>-->
-    <!--    <string name="welcome">Welcome</string>-->
-    <!--    <string name="username_home">Username</string>-->
-    <!--    <string name="prediksi_pengeluaranku">PREDIKSI PENGELUARAN KU</string>-->
-    <!--    <string name="rp">Rp</string>-->
-    <!--    <string name="jumlah_pengeluaran">7.000.000,00</string>-->
-    <!--    <string name="lihat_detail">Lihat Detail</string>-->
-    <!--    <string name="tabungan_idealku">Tabungan Ideal Ku</string>-->
-    <!--    <string name="dana_darurat">Rekomendasi Dana Darurat</string>-->
-    <string name="dana_darurat_jumlah">2.000.000,00</string>
-    <string name="selamatDatang">Selamat Datang,</string>
+    <string name="app_name">My Application</string>
+    <string name="FinSafe">FinSafe</string>
+    <string name="username">Username</string>
     <string name="email">username@gmail.com</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="general">General</string>
@@ -63,9 +46,10 @@
     <string name="error_message">Sesuatu ada yang Salah\nMohoh dicoba kembali</string>
     <string name="ok">Oke</string>
     <string name="response_image">gambar respon</string>
-    <string name="app_name">FinSafe</string>
-    <string name="username">Username</string>
-    <string name="username_home">username</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dana_darurat_jumlah">7.000.000,00</string>
+    <string name="selamatDatang">Selamat datang,</string>
     <string name="kepalaRumah">Informasi Kepala Rumah Tangga</string>
     <string name="usiaRumah">Usia Kepala Rumah Tangga</string>
     <string name="lihat_jumlah_tabungan">Ayo lihat detailnya !</string>
@@ -111,6 +95,7 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="username_home">Velman noela harefa</string>
 
 
 </resources>

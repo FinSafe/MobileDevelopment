@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.CompoundButton
 import androidx.activity.enableEdgeToEdge
@@ -11,11 +12,14 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.data.ViewModelFactory
+import com.example.myapplication.data.pref.LoginPreference
 import com.example.myapplication.databinding.ActivityProfileBinding
+import com.example.myapplication.ui.Login.LoginActivity
 import com.google.android.material.switchmaterial.SwitchMaterial
 
 class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
+    private lateinit var loginPreference: LoginPreference
     private val viewModel by viewModels<ProfileViewModel> {
         ViewModelFactory.getInstance(this)
     }
@@ -48,5 +52,22 @@ class ProfileActivity : AppCompatActivity() {
             viewModel.saveThemeSetting(isChecked)
         }
 
+        getName()
+
+    }
+
+    private fun getName(){
+        loginPreference = LoginPreference(this)
+
+        binding.cardKeluar.setOnClickListener{
+            loginPreference.clearLogin()
+            moveToLogin()
+        }
+    }
+    private fun moveToLogin(){
+        val intent = Intent(this, LoginActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
     }
 }
