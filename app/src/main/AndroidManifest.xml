@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ui.tabunganidealku.TabunganIdealkuActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".ui.danadarurat.DanaDaruratActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.landingPage.LandingThirdActivity"
             android:exported="false" />
@@ -35,8 +42,8 @@
         <activity
             android:name=".ui.Login.LoginActivity"
             android:exported="false" />
-
-        <activity android:name=".ui.SplashScreenActivity"
+        <activity
+            android:name=".ui.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,10 +51,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.home.MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>
