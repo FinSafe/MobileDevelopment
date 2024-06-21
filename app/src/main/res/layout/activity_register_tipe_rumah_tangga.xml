@@ -5,20 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.register.RegisterDomisiliActivity">
+    tools:context=".ui.register.RegisterTipeRumahTanggaActivity">
 
     <TextView
-        android:id="@+id/tvProvinsi"
+        android:id="@+id/tvTipe_rumah_tangga"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Provinsi domisili"
+        android:text="Tipe rumah tangga"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/provinsi_domisili"
+        app:layout_constraintStart_toStartOf="@+id/Tipe_rt"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/provinsi_domisili"
+        android:id="@+id/Tipe_rt"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvProvinsi">
+        app:layout_constraintTop_toBottomOf="@id/tvTipe_rumah_tangga">
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView"
@@ -37,17 +37,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvLuasRumah"
+        android:id="@+id/tvJumlah_anggota_kk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Luas rumah"
+        android:text="Jumlah total anggota keluarga"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/LuasRumah"
-        app:layout_constraintTop_toBottomOf="@+id/provinsi_domisili" />
+        app:layout_constraintStart_toStartOf="@id/jumlah_anggota_kk"
+        app:layout_constraintTop_toBottomOf="@+id/Tipe_rt" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LuasRumah"
+        android:id="@+id/jumlah_anggota_kk"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -56,29 +56,28 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLuasRumah">
+        app:layout_constraintTop_toBottomOf="@+id/tvJumlah_anggota_kk">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:ems="10"
-            android:inputType="text"
-            android:hint="contoh: 178"/>
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvTipe_bangunan"
+        android:id="@+id/tvJumlah_anak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Tipe bangunan rumahh"
+        android:text="Jumlah anak"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/LuasRumah"
-        app:layout_constraintTop_toBottomOf="@+id/LuasRumah" />
+        app:layout_constraintStart_toStartOf="@id/Jumlah_anak"
+        app:layout_constraintTop_toBottomOf="@+id/jumlah_anggota_kk" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Tipe_bangunan"
+        android:id="@+id/Jumlah_anak"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -87,7 +86,7 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTipe_bangunan">
+        app:layout_constraintTop_toBottomOf="@id/tvJumlah_anak">
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView1"
@@ -97,17 +96,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvListrik"
+        android:id="@+id/tvBanyak_kendaraan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="listrik"
+        android:text="Banyaknya kendaraan yang dimiliki"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/Listrik"
-        app:layout_constraintTop_toBottomOf="@+id/Tipe_bangunan" />
+        app:layout_constraintStart_toStartOf="@id/banyak_kendaraan"
+        app:layout_constraintTop_toBottomOf="@+id/Jumlah_anak" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Listrik"
+        android:id="@+id/banyak_kendaraan"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -116,7 +115,7 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvListrik">
+        app:layout_constraintTop_toBottomOf="@id/tvBanyak_kendaraan">
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView2"
@@ -126,17 +125,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvKamar"
+        android:id="@+id/tvJumlah_anggota_kk_gawe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="banyaknya kamar tidur"
+        android:text="Jumlah anggota keluarga bekerja"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/Kamar"
-        app:layout_constraintTop_toBottomOf="@+id/Listrik" />
+        app:layout_constraintStart_toStartOf="@id/jumlah_kk_anggota_gawe"
+        app:layout_constraintTop_toBottomOf="@+id/banyak_kendaraan" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Kamar"
+        android:id="@+id/jumlah_kk_anggota_gawe"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -145,29 +144,28 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvKamar">
+        app:layout_constraintTop_toBottomOf="@+id/tvJumlah_anggota_kk_gawe">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/texeditTP"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:ems="10"
-            android:hint="contoh: 5"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvStatus_milik"
+        android:id="@+id/tvBanyak_kendaraan_bermotor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Status kepemilikan"
+        android:text="Banyaknya kendaraan motor dimiliki"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/Status_milik"
-        app:layout_constraintTop_toBottomOf="@+id/Kamar" />
+        app:layout_constraintStart_toStartOf="@id/banyak_kendaraan_bermotor"
+        app:layout_constraintTop_toBottomOf="@+id/jumlah_kk_anggota_gawe" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Status_milik"
+        android:id="@+id/banyak_kendaraan_bermotor"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -176,13 +174,13 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvStatus_milik">
+        app:layout_constraintTop_toBottomOf="@id/tvBanyak_kendaraan_bermotor">
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:inputType="none"/>
+            android:text="laki - laki"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -192,7 +190,7 @@
         android:backgroundTint="@color/purple"
         android:text="@string/register2"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/Status_milik"
+        app:layout_constraintTop_toBottomOf="@id/banyak_kendaraan_bermotor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

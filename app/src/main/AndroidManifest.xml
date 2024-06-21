@@ -15,6 +15,15 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ui.register.RegisterDanaDaruratActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.register.RegisterTelevisiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.register.RegisterTipeRumahTanggaActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.Prediksi_pengeluaran"
             android:exported="false" />
         <activity
@@ -54,7 +63,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.home.MainActivity"
             android:exported="false" />

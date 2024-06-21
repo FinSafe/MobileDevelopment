@@ -97,5 +97,184 @@
     </string>
     <string name="username_home">Velman noela harefa</string>
 
+    <!-- drop down menu-->
+    <string-array name="informasi_kepala_keluarga">
+        <item>Laki - laki</item>
+        <item>Perempuan</item>
+    </string-array>
 
+    <string-array name="status_perkawinan">
+        <item>Bercerai/Berpisah/Dibatalkan</item>
+        <item>Menikah</item>
+        <item>Lajang</item>
+        <item>Tidak Diketaui</item>
+    </string-array>
+
+    <string-array name="pendidikan_kepala_rumah_tangga">
+        <item>Sekolah dasar</item>
+        <item>SMP/SMA</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>Program sertifikasi</item>
+    </string-array>
+
+    <string-array name="sumber_pendapatan_utama">
+        <item>Wirausaha</item>
+        <item>Sumber Pendapatan Lain</item>
+        <item>Upah/gaji</item>
+    </string-array>
+
+    <string-array name="provinsi_domisili">
+        <item>Nangroe Aceh Darussalam</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Selatan</item>
+        <item>Sumatera Barat</item>
+        <item>Bengkulu</item>
+        <item>Riau</item>
+        <item>Kepulauan Riau</item>
+        <item>Jambi</item>
+        <item>Lampung</item>
+        <item>Bangka belitung</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan timur</item>
+        <item>Kalimantan selatan</item>
+        <item>Kalimantan tengah</item>
+        <item>Kalimantan utara</item>
+        <item>Banten</item>
+        <item>Jakarta</item>
+        <item>Jawa barat</item>
+        <item>Jawa tengah</item>
+        <item>jogja</item>
+        <item>Jawa timur</item>
+        <item>Bali</item>
+        <item>NTT</item>
+        <item>NTB</item>
+        <item>Gorontalo</item>
+        <item>Sulawesi barat</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Utara</item>
+        <item>Sulawesi tenggara</item>
+        <item>Sulawesi selatan</item>
+        <item>Maluku utara</item>
+        <item>Maluku</item>
+        <item>Papua barat</item>
+        <item>Papua</item>
+        <item>Papua tengah</item>
+        <item>Papua pegunungan</item>
+        <item>Papua selatan</item>
+        <item>Papua barat daya</item>
+    </string-array>
+
+    <string-array name="listrik">
+        <item>ya</item>
+        <item>tidak</item>
+    </string-array>
+
+    <string-array name="status_tempat_tinggal">
+        <item>Milik sendiri</item>
+        <item>Kontrak</item>
+        <item>Sewa</item>
+        <item>Rumah dinas</item>
+        <item>Rumah orang tua</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="anak">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="mobil">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="motor">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="television">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="air_conditioner">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="komputer">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="hp">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="kulkas">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="mesin_cuci">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="dana_darurat">
+        <item>ya</item>
+        <item>tidak</item>
+    </string-array>
+
+    <string-array name="hutang">
+        <item>ya</item>
+        <item>tidak</item>
+    </string-array>
+
+    <!-- register stuff-->
+    <string name="register2">Berikutnya -></string>
 </resources>

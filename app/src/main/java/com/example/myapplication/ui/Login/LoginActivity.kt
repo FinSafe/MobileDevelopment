@@ -15,6 +15,7 @@ import com.example.myapplication.databinding.ActivityLoginBinding
 import com.example.myapplication.ui.customview.ResponView
 import com.example.myapplication.ui.home.MainActivity
 import com.example.myapplication.ui.register.RegisterActivity
+import com.example.myapplication.ui.register.RegisterKepalaRumahActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -77,7 +78,9 @@ class LoginActivity : AppCompatActivity() {
     private fun successLoginHandler(loginResponse: LoginResponse) {
         saveData(loginResponse)
         Toast.makeText(this, R.string.login_success, Toast.LENGTH_SHORT).show()
-           moveToMainActivity()
+        val intent = Intent(this, RegisterKepalaRumahActivity::class.java)
+        startActivity(intent)
+//           moveToMainActivity()
     }
 
     private fun saveData(response: LoginResponse) {
