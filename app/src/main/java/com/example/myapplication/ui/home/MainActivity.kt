@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.
         setupViewModel()
         getusername()
         getPrediksi_pengeluaran()
