@@ -21,6 +21,7 @@ class RegisterTelevisiActivity : AppCompatActivity() {
         val televisi = resources.getStringArray(R.array.television)
         val kulkas = resources.getStringArray(R.array.kulkas)
         val komputer = resources.getStringArray(R.array.komputer)
+        val hp = resources.getStringArray(R.array.hp)
         val AC = resources.getStringArray(R.array.air_conditioner)
         val mesin_cuci = resources.getStringArray(R.array.mesin_cuci)
         val arrayAdapte = ArrayAdapter(this, R.layout.dropdown_item, televisi)
@@ -33,6 +34,8 @@ class RegisterTelevisiActivity : AppCompatActivity() {
         binding.autoCompleteac.setAdapter(arrayAdapte4)
         val arrayAdapte5 = ArrayAdapter(this, R.layout.dropdown_item, mesin_cuci)
         binding.autoCompletemesincuci.setAdapter(arrayAdapte5)
+        val arrayAdapte6 = ArrayAdapter(this, R.layout.dropdown_item, hp)
+        binding.autoCompleteteleponSeluler.setAdapter(arrayAdapte6)
 
         binding.registerButton.setOnClickListener {
 

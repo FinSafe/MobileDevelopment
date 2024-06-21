@@ -11,6 +11,7 @@ import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.ui.Login.LoginViewModel
 import com.example.myapplication.databinding.RekomendasiDanadaruratBinding
 import com.example.myapplication.ui.Prediksi_pengeluaran
+import com.example.myapplication.ui.Tambah_pengeluaran_Activity
 import com.example.myapplication.ui.danadarurat.DanaDaruratActivity
 import com.example.myapplication.ui.profile.ProfileActivity
 import com.example.myapplication.ui.tabunganidealku.TabunganIdealkuActivity
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         getusername()
         getPrediksi_pengeluaran()
         getDana_darurat()
+        get_feature()
     }
 
     private fun setupViewModel(){
@@ -68,6 +70,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, DanaDaruratActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun get_feature(){
+        binding.btnFeature.setOnClickListener{
+            val intent = Intent(this, Tambah_pengeluaran_Activity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 
