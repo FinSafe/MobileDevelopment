@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvProvinsi">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView"
+            android:id="@+id/autoCompletedomisili"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="none"/>
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvTipe_bangunan">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView1"
+            android:id="@+id/autoCompletebangunan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="none"/>
@@ -119,7 +119,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvListrik">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView2"
+            android:id="@+id/autoCompletelistik"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="none"/>
@@ -179,7 +179,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvStatus_milik">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView3"
+            android:id="@+id/autoCompletekepemilikan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="none"/>

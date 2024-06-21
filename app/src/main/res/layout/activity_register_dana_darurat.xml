@@ -8,17 +8,17 @@
     tools:context=".ui.register.RegisterDanaDaruratActivity">
 
     <TextView
-        android:id="@+id/kepalaKeluargaTextView"
+        android:id="@+id/tvDanaDarurat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/kepalaRumah"
+        android:layout_marginTop="52dp"
+        android:text="Apakah sudah memiliki dana darurat"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/kepalaRumahTanggaEditTextLayout"
+        app:layout_constraintStart_toStartOf="@+id/DanaDarurat"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/kepalaRumahTanggaEditTextLayout"
+        android:id="@+id/DanaDarurat"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -27,27 +27,27 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/kepalaKeluargaTextView">
+        app:layout_constraintTop_toBottomOf="@id/tvDanaDarurat">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView"
+            android:id="@+id/autoCompletedanadarurat"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="laki - laki"/>
+            android:inputType="none"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvUsiaKK"
+        android:id="@+id/tvDana_darurat_terumpul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/kepalaRumah"
+        android:text="Jumlah dana darurat yang terkumpul"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/usiaKK"
-        app:layout_constraintTop_toBottomOf="@+id/kepalaRumahTanggaEditTextLayout" />
+        app:layout_constraintStart_toStartOf="@id/Dana_darurat_terkumpul"
+        app:layout_constraintTop_toBottomOf="@+id/DanaDarurat" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/usiaKK"
+        android:id="@+id/Dana_darurat_terkumpul"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUsiaKK">
+        app:layout_constraintTop_toBottomOf="@+id/tvDana_darurat_terumpul">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameEditText"
@@ -67,17 +67,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/Status_perkawinan_TextView"
+        android:id="@+id/tv_hutang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Status perkawinan rumah tangga"
+        android:text="Apakah sedang memiliki hutang/cicilan"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/StatusPerkawinan"
-        app:layout_constraintTop_toBottomOf="@+id/usiaKK" />
+        app:layout_constraintStart_toStartOf="@id/hutang"
+        app:layout_constraintTop_toBottomOf="@+id/Dana_darurat_terkumpul" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/StatusPerkawinan"
+        android:id="@+id/hutang"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -86,56 +86,28 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Status_perkawinan_TextView">
+        app:layout_constraintTop_toBottomOf="@id/tv_hutang">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView1"
+            android:id="@+id/autoCompletehutang"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="laki - laki"/>
+            android:inputType="none"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvPendidikan_terakhir"
+        android:id="@+id/tvJumlah_hutang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Pendidikan terakhir kepala rumah tangga"
+        android:text="Jumlah total hutang/cicilan"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/Pendidikan_terakhir"
-        app:layout_constraintTop_toBottomOf="@+id/StatusPerkawinan" />
+        app:layout_constraintStart_toStartOf="@id/jumlah_hutang"
+        app:layout_constraintTop_toBottomOf="@+id/hutang" />
+
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Pendidikan_terakhir"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvPendidikan_terakhir">
-
-        <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="laki - laki"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/tvTotalPendapatan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/kepalaRumah"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/totalPendapatan"
-        app:layout_constraintTop_toBottomOf="@+id/Pendidikan_terakhir" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/totalPendapatan"
+        android:id="@+id/jumlah_hutang"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -144,7 +116,7 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalPendapatan">
+        app:layout_constraintTop_toBottomOf="@+id/tvJumlah_hutang">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/texeditTP"
@@ -154,34 +126,6 @@
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tvSumber_Pendapatan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Pendidikan terakhir kepala rumah tangga"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/Sumber_pendapatan"
-        app:layout_constraintTop_toBottomOf="@+id/totalPendapatan" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Sumber_pendapatan"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSumber_Pendapatan">
-
-        <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView3"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="laki - laki"/>
-    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/registerButton"
@@ -189,8 +133,8 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/purple"
         android:text="@string/register2"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/Sumber_pendapatan"
+        android:layout_marginTop="210dp"
+        app:layout_constraintTop_toBottomOf="@id/jumlah_hutang"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

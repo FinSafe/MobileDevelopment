@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Tambah_pengeluaran_Activity">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="20dp"
+        android:background="@null"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:tint="@color/purple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseAppTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Tambah Pengeluaran"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="115dp"
+        android:text="Jumlah"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.example.myapplication.ui.customview.CustomEditText
+        android:id="@+id/jumlah_pengeluaran"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="135dp"
+        android:background="@drawable/rounded_edittext_background_pengeluaran"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="215dp"
+        android:text="Kategori"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.example.myapplication.ui.customview.CustomEditText
+        android:id="@+id/kategori_pengeluaran"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="235dp"
+        android:background="@drawable/rounded_edittext_background_pengeluaran"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="315dp"
+        android:text="Deskripsi"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.example.myapplication.ui.customview.CustomEditText
+        android:id="@+id/deskripsi_pengeluaran"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="335dp"
+        android:background="@drawable/rounded_edittext_background_pengeluaran"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="58dp"
+        android:background="@drawable/baseline_calendar_month_24"
+        app:layout_constraintTop_toBottomOf="@id/deskripsi_pengeluaran"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="100dp"
+        android:text="Pilih hari"
+        app:layout_constraintTop_toBottomOf="@id/deskripsi_pengeluaran"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:backgroundTint="@color/purple"
+        android:text="Simpan"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deskripsi_pengeluaran" />
+</androidx.constraintlayout.widget.ConstraintLayout>

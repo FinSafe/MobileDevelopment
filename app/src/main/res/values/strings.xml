@@ -275,6 +275,21 @@
         <item>tidak</item>
     </string-array>
 
+    <string-array name="tipe_bangunan">
+        <item>Bangunan komersial</item>
+        <item>Bangunan apartemen untuk dua rumah tangga berbeda</item>
+        <item>Tempat tinggal institusional</item>
+        <item>Perumahan multi unit</item>
+        <item>Unit bangunan lainnya</item>
+        <item>Rumah tunggal</item>
+    </string-array>
+
+    <string-array name="tipe_rt">
+        <item>Keluarga besar</item>
+        <item>Keluarga tunggal</item>
+        <item>Dua atau lebih orang/anggota yang tidak berhubungan</item>
+    </string-array>
+
     <!-- register stuff-->
     <string name="register2">Berikutnya -></string>
 </resources>

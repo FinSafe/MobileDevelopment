@@ -44,7 +44,7 @@ class RegisterActivity : AppCompatActivity() {
                     setTitle("Selamat!")
                     setMessage("Kamu berhasil registrasi")
                     setPositiveButton("Lanjut") { _,_ ->
-                        val intent = Intent(context, LoginActivity::class.java)
+                        val intent = Intent(context, RegisterKepalaRumahActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                         startActivity(intent)
                         finish()

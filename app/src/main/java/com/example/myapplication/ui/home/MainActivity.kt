@@ -37,8 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.tabunganIdealku.setOnClickListener {
             val intent = Intent(this, TabunganIdealkuActivity::class.java)
+            startActivity(intent)
         }
 
+        binding.
         setupViewModel()
         getusername()
         getPrediksi_pengeluaran()

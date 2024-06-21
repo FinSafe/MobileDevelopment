@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvTipe_rumah_tangga">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView"
+            android:id="@+id/autoCompletetipert"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="none"/>
@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvJumlah_anak">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView1"
+            android:id="@+id/autoCompleteanak"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="none"/>
@@ -100,7 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Banyaknya kendaraan yang dimiliki"
+        android:text="Banyaknya kendaraan mobil yang dimiliki"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@id/banyak_kendaraan"
         app:layout_constraintTop_toBottomOf="@+id/Jumlah_anak" />
@@ -118,7 +118,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvBanyak_kendaraan">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView2"
+            android:id="@+id/autoCompletemobil"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="none"/>
@@ -177,7 +177,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvBanyak_kendaraan_bermotor">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView3"
+            android:id="@+id/autoCompletemotor"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="none"/>

@@ -80,7 +80,7 @@ class LoginActivity : AppCompatActivity() {
         Toast.makeText(this, R.string.login_success, Toast.LENGTH_SHORT).show()
         val intent = Intent(this, RegisterKepalaRumahActivity::class.java)
         startActivity(intent)
-//           moveToMainActivity()
+           moveToMainActivity()
     }
 
     private fun saveData(response: LoginResponse) {
