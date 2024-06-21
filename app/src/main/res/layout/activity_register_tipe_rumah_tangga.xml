@@ -180,7 +180,7 @@
             android:id="@+id/autoCompleteTextView3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="laki - laki"/>
+            android:inputType="none"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
